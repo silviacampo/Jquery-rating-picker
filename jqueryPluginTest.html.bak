@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="./imagerating.js"></script>
+
+  <title>Test</title>
+ </head>
+ <body>
+
+<h1>Sample</h1>
+
+<div id="rating"></div>
+<p>bla...bla...bla</p>
+
+
+
+<script type="text/javascript">
+//$.fn.imagerating.defaults.width= 500;
+$("#rating").imagerating({
+				inputName: "userRating", 
+				defaultValue: 0,
+				imagesrcs: ["./images/rating0s12.gif", "./images/rating2s12.gif", "./images/rating4s12.gif", "./images/rating6s12.gif", "./images/rating8s12.gif","./images/rating10s12.gif" ],
+				//width: 100,
+        //height: 20,
+				onRatingClick : function() { alert('Clicked!! Value: '+ $("#rating").imagerating.getValue()); }
+				});
+
+
+</script>
+
+ </body>
+</html>
